@@ -1,0 +1,30 @@
+{
+  "name": "react-pagination-baidu",
+  "version": "1.0.0",
+  "description": "a react pagination component for baidu",
+  "main": "cjs/index.js",
+  "module": "es/index.js",
+  "repository": "git://github.com/chxhitsz/react-pagination-baidu.git",
+  "author": "chxhitsz@foxmail.com",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "skr run rollup --clean",
+    "report-cov": "cat coverage/lcov.info | coveralls",
+    "lint": "skr lint",
+    "test": "yarn run build && skr test --target=react --coverage",
+    "ci": "yarn test && yarn run build",
+    "prepublishOnly": "yarn run ci"
+  },
+  "dependencies": {
+    "@huse/derived-state": "^1.1.1",
+    "classnames": "^2.3.1",
+    "lodash": "^4.17.21",
+    "prop-types": "^15.8.1",
+    "react": "^17.0.2",
+    "react-whether": "^1.1.1"
+  },
+  "devDependencies": {
+    "@reskript/cli": "0.9.0"
+  }
+}
